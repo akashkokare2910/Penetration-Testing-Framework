@@ -23,10 +23,16 @@ Required Libraries:
 ```bash
   pip install python-tk
   pip install pillow
-  pip install pycrypto
-  pip install cryptography
   pip install sqlite3
 ```
+```bash
+ pip install pycrypto
+ pip install cryptography
+```
+```bash
+ pip install sqlite3
+```
+ 
 
 ## To run this project run following command in terminal
 
