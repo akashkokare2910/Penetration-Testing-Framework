@@ -40,7 +40,7 @@ Required Libraries:
   python home_page.py
 ```
 
-### Languages and Tools:
+## Languages and Tools:
 
 #### Languages and Libraries: Python3, Tkinter, Sqlite3
 #### Tools: VS Code, Git, Github
