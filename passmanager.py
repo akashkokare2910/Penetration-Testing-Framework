@@ -46,7 +46,7 @@ length_entry.grid(row=0, column=1)
 # This function is for going to help
 def open_help():
     webbrowser.open(
-        '', new=2)
+        'https://github.com/Parinz/Encrypted-Tkinter-Password-Manager#Setup', new=2)
 
 
 # Creating a function for encrypting and decrypting the .db file.
@@ -98,7 +98,6 @@ with open('firstrun.txt', 'a+') as f:
             kf.seek(0)
             kf_contents = kf.read()
             key = kf_contents
-            
             my_fernet = Fernet(key)
 
         # Get Master Password
@@ -413,8 +412,8 @@ Settings_Bttn = Button(bottom_bar, text="Settings", command=Authentication2)
 Settings_Bttn.grid(row=1, column=0)
 
 
-# Made By Parin Label
-Credits = Label(bottom_bar, text="Made by Parin")
+# Made By Securezy Label
+Credits = Label(bottom_bar, text="Made by Securezy")
 Credits.grid(row=2, column=0)
 
 

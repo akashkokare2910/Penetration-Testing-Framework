@@ -1,38 +1,47 @@
 from tkinter import *
 import os
 import tkinter 
+# import subprocess 
+# subprocess.call('start', shell = True) 
 
 
 from PIL import ImageTk,Image
 from click import style
 
 w=Tk()
-w.geometry('1100x700')
+w.geometry('1200x700')
 w.configure(bg='#262626')
 w.resizable(0,0)
 w.title('Securezy Pentesting Framework')
 
-def passenc():
+def passenc():      
     os.system('python GUI.py')
 
-def passmanager():
+def pass_manager():
     os.system('python passmanager.py')
 
 def portscan():
     os.system('python portscanner.py')
+
+def portscannerip():
+    os.system('start cmd')
+
+def hasher():
+    # os.system('start cmd')
+    os.system('python hasher.py')
    
 
-l1=Label(w,text='Hey Securezy\n for you!!',fg='red',bg='#262626', font='times 24 bold italic')
-l1.config(font=('Comic Sans MS',90))
-l1.pack(expand=True)
+# l1=Label(w,text='Hey Securezy\n for you!!',fg='red',bg='#262626', font='times 24 bold italic')
+# l1.config(font=('Comic Sans MS',90))
+# l1.pack(expand=True)
 
-background_image = tkinter.PhotoImage(file='Text Encryption/hacking.png')
+background_image = tkinter.PhotoImage(file='Text Encryption/Landing_Page1.png')
 background_label = tkinter.Label(w, text='Some Plain Text',image=background_image)
 background_label.place(relwidth=1, relheight=1)
 
 
 def toggle_win():
-    f1=Frame(w,width=300,height=700,bg='#12c4c0')
+    f1=Frame(w,width=300,height=700,bg='#252d42')
     f1.place(x=0,y=0)
 
 
@@ -44,19 +53,19 @@ def toggle_win():
      
         def on_entera(e):
             myButton1['background'] = bcolor #ffcc66
-            myButton1['foreground']= '#262626'  #000d33
+            myButton1['foreground']= '#ede8e8'  #000d33
 
         def on_leavea(e):
             myButton1['background'] = fcolor
-            myButton1['foreground']= '#262626'
+            myButton1['foreground']= '#ede8e8'
 
         myButton1 = Button(f1,text=text,
                        width=42,
                        height=2,
-                       fg='#262626',
+                       fg='#ede8e8',
                        border=0,
                        bg=fcolor,
-                       activeforeground='#262626',
+                       activeforeground='#ede8e8',
                        activebackground=bcolor,            
                        command=cmd)
                       
@@ -65,12 +74,12 @@ def toggle_win():
 
         myButton1.place(x=x,y=y)
 
-    bttn(0,80,'TEXT ENCRYPTION/DECRYPTION','#0f9d9a','#12c4c0',passenc)
-    bttn(0,117,'PASSWORD CRACKING','#0f9d9a','#12c4c0',None)
-    bttn(0,154,'PORT SCANNING','#0f9d9a','#12c4c0',portscan)
-    bttn(0,191,'PASSWORD MANAGER','#0f9d9a','#12c4c0',passmanager)
-    # bttn(0,228,'XXXXX','#0f9d9a','#12c4c0',None)
-    # bttn(0,265,'XXXX','#0f9d9a','#12c4c0',None)
+    bttn(0,80,'TEXT ENCRYPTION/DECRYPTION','#12c48c','#252d42',passenc)
+    bttn(0,117,'HASHER','#12c48c','#252d42',hasher)
+    bttn(0,154,'PORT SCANNER','#12c48c','#252d42',portscan)
+    bttn(0,191,'PASSWORD MANAGER','#12c48c','#252d42',pass_manager)
+    bttn(0,228,'IP PORT SCANNING CLI','#12c48c','#252d42',portscannerip)
+    # bttn(0,265,'HASHER','#0f9d9a','#12c4c0',None)
 
     #
     def dele():
@@ -83,8 +92,8 @@ def toggle_win():
            image=img2,
            border=0,
            command=dele,
-           bg='#12c4c0',
-           activebackground='#12c4c0').place(x=5,y=10)
+           bg='#3682f5',
+           activebackground='#3682f5').place(x=5,y=10)
     
 
 img1 = ImageTk.PhotoImage(Image.open("Text Encryption/open.png"))
